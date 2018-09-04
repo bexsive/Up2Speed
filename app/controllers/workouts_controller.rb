@@ -10,6 +10,8 @@ class WorkoutsController < ApplicationController
   # GET /workouts/1
   # GET /workouts/1.json
   def show
+    @workout = Workout.find(params[:id])
+    @lifts = @workout.lifts.all
   end
 
   # GET /workouts/new

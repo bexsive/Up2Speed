@@ -6,6 +6,7 @@ class UsersController < ApplicationController
   def show
     @user = User.find(params[:id])
     @workouts = @user.workouts.all
+    @meals = @user.meals.all
   end
 
   def edit

@@ -9,7 +9,7 @@ class LiftsController < ApplicationController
   end
 
   def index
-    @workout = Workout.find(params[:id])
+    @workout = Workout.find(params[:workout_id])
     @lift = @workout.lifts.all
 
   end

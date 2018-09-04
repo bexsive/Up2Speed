@@ -10,5 +10,19 @@
   <%= @workout.date %>
 </p>
 
+<% @lifts.each do |lift| %>
+  <div>
+    <%= lift.reps %>
+  </div>
+
+  <div>
+    <%= lift.weight %>
+  </div>
+
+  <div>
+    <%= lift.duration %>
+  </div>
+<% end %>
+
 <%= link_to 'Edit', edit_workout_path(@workout) %> |
 <%= link_to 'Back', workouts_path %>
