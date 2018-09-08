@@ -16,9 +16,8 @@
       <tbody>
         <% @workouts.each do |workout| %>
           <tr>
-            <td><%= workout.name %></td>
+            <td><%= link_to workout.name, workout %></td>
             <td><%= workout.date %></td>
-            <td><%= link_to 'Show', workout %></td>
             <td><%= link_to 'Edit', edit_workout_path(workout) %></td>
             <td><%= link_to 'Destroy', workout, method: :delete, data: { confirm: 'Are you sure?' } %></td>
           </tr>
@@ -46,9 +45,8 @@
       <tbody>
         <% @meals.each do |meal| %>
           <tr>
-            <td><%= meal.label %></td>
+            <td><%= link_to meal.label, user_meal_path(@user, meal) %></td>
             <td><%= meal.time %></td>
-            <td><%= link_to 'Show', user_meal_path(@user, meal) %></td>
             <td><%= link_to 'Edit', edit_user_meal_path(@user, meal) %></td>
             <td><%= link_to 'Destroy', user_meal_path(@user, meal), method: :delete, data: { confirm: 'Are you sure?' } %></td>
           </tr>
